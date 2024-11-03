@@ -61,7 +61,7 @@ class TestCustomised(unittest.TestCase):
         self.customised_page.enter_min_transaction_value("500")
         self.customised_page.enter_num_transaction("5")
         
-        error_message = self.driver.find_element(By.ID, "message2")  # ID theo thông báo lỗi thực tế
+        error_message = self.driver.find_element(By.ID, "message2")  
         self.assertTrue(error_message.is_displayed())
         self.assertEqual(error_message.text, "Account Number must not be blank")
 
@@ -72,7 +72,7 @@ class TestCustomised(unittest.TestCase):
         self.customised_page.enter_min_transaction_value("500")
         self.customised_page.enter_num_transaction("5")
         
-        error_message = self.driver.find_element(By.ID, "message2")  # ID theo thông báo lỗi thực tế
+        error_message = self.driver.find_element(By.ID, "message2")  
         self.assertTrue(error_message.is_displayed(), "Error message not displayed")
         self.assertEqual(error_message.text, "Characters are not allowed")
 
@@ -83,7 +83,7 @@ class TestCustomised(unittest.TestCase):
         self.customised_page.enter_min_transaction_value("500")
         self.customised_page.enter_num_transaction("5")
         
-        error_message = self.driver.find_element(By.ID, "message26")  # ID theo thông báo lỗi thực tế
+        error_message = self.driver.find_element(By.ID, "message26")  
         self.assertTrue(error_message.is_displayed(), "Error message not displayed")
         self.assertEqual(error_message.text, "From Date Field must not be blank")
 
@@ -94,7 +94,7 @@ class TestCustomised(unittest.TestCase):
         self.customised_page.enter_min_transaction_value("five hundred") # Characters are not allowed
         self.customised_page.enter_num_transaction("5")
         
-        error_message = self.driver.find_element(By.ID, "message12")  # ID theo thông báo lỗi thực tế
+        error_message = self.driver.find_element(By.ID, "message12")  
         self.assertTrue(error_message.is_displayed(), "Error message not displayed")
         self.assertEqual(error_message.text, "Characters are not allowed")
 
@@ -105,7 +105,7 @@ class TestCustomised(unittest.TestCase):
         self.customised_page.enter_min_transaction_value("500")
         self.customised_page.enter_num_transaction("five") # Characters are not allowed
         
-        error_message = self.driver.find_element(By.ID, "message13")  # ID theo thông báo lỗi thực tế
+        error_message = self.driver.find_element(By.ID, "message13")  
         self.assertTrue(error_message.is_displayed(), "Error message not displayed")
         self.assertEqual(error_message.text, "Characters are not allowed")
 
