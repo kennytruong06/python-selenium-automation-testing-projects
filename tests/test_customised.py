@@ -62,7 +62,7 @@ class TestCustomised(unittest.TestCase):
         self.customised_page.enter_num_transaction("5")
         
         error_message = self.driver.find_element(By.ID, "message2")  # ID theo thông báo lỗi thực tế
-        self.assertTrue(error_message.is_displayed(), "Error message not displayed")
+        self.assertTrue(error_message.is_displayed())
         self.assertEqual(error_message.text, "Account Number must not be blank")
 
     def test_account_no_characters_not_allowed(self):

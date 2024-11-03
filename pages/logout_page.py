@@ -15,3 +15,4 @@ class LogoutPage:
         """Accepts the alert that appears upon clicking logout."""
         alert = self.driver.switch_to.alert
         alert.accept()
+                                                                                                                                                    
